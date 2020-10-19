@@ -10,7 +10,8 @@ from you_get.extractors import (
     acfun,
     bilibili,
     soundcloud,
-    tiktok
+    tiktok,
+    iqiyi
 )
 
 
@@ -21,6 +22,12 @@ class YouGetTests(unittest.TestCase):
     def test_magisto(self):
         magisto.download(
             'http://www.magisto.com/album/video/f3x9AAQORAkfDnIFDA',
+            info_only=True
+        )
+        
+    def test_iqiyi(self):
+        magisto.download(
+            'https://www.iqiyi.com/v_19rsntzl7w.html',
             info_only=True
         )
 
